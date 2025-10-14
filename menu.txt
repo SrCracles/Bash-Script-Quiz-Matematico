@@ -1,0 +1,42 @@
+#!/bin/bash
+
+while true
+do
+    clear
+    echo "      QUIZ MATEMÁTICO"
+    echo "---------------------------------"
+    echo "1) Problemas de suma"
+    echo "2) Problemas de resta"
+    echo "3) Problemas de multiplicación"
+    echo "4) Problemas de división"
+    echo "9) Salir"
+    echo "---------------------------------"
+    echo -n "Opción -> "
+    read opcion
+    
+    case $opcion in
+        1)
+            bash suma.sh
+            ;;
+        2)
+            bash resta.sh
+            ;;
+        3)
+            bash multiplicacion.sh
+            ;;
+        4)
+            bash division.sh
+            ;;
+        9)
+            echo ""
+            echo "Chaos"
+            exit 0
+            ;;
+        *)
+            echo ""
+            echo "Opción invalida. Por favor selecciona una opción valida."
+            echo -n "Presione ENTER para continuar..."
+            read
+            ;;
+    esac
+done
