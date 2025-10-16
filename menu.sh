@@ -35,7 +35,7 @@ do
         *)
             echo ""
             echo "Opción invalida. Por favor selecciona una opción valida."
-            echo -n "Presione ENTER para continuar..."
+            echo -n "Presione ENTER para continuar"
             read
             ;;
     esac
