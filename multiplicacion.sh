@@ -1,18 +1,19 @@
 #!/bin/bash
-
-typeset -i num1 num2 respuesta intentos resultado
+typeset -i num1 num2 respuesta intentos resultado 
 
 num1=$((RANDOM % 101))
-num2=$((RANDOM % 101))
-resultado=$((num1 + num2))
+num2=$((RANDOM % 11))
+
+
+resultado=$((num1 * num2))
 
 echo ""
-echo "***PROBLEMA DE SUMA***"
+echo "***PROBLEMA DE MULTIPLICACION***"
 intentos=1
 
 while (( intentos <= 3 ))
 do
-    echo -n "¿Cuanto es $num1 + $num2? "
+    echo -n "¿Cuanto es $num1 * $num2? "
     read respuesta
     
     if (( respuesta == resultado ))
@@ -40,4 +41,6 @@ done
 echo ""
 echo -n "Presione ENTER para continuar"
 read
+
 bash menu.sh
+

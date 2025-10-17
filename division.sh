@@ -1,18 +1,29 @@
 #!/bin/bash
+typeset -i a b respuesta intentos resultado dividendo
 
-typeset -i num1 num2 respuesta intentos resultado
+a=$((RANDOM % 11))
+b=$((RANDOM % 11))
 
-num1=$((RANDOM % 101))
-num2=$((RANDOM % 101))
-resultado=$((num1 + num2))
+if ((a<1))
+    then
+    a=1
+    fi
+
+if ((b<1))
+    then
+    b=1
+    fi
+dividendo=$((a * b))
+
+resultado=$((dividendo/b))
 
 echo ""
-echo "***PROBLEMA DE SUMA***"
+echo "***PROBLEMA DE DIVISION***"
 intentos=1
 
 while (( intentos <= 3 ))
 do
-    echo -n "¿Cuanto es $num1 + $num2? "
+    echo -n "¿Cuanto es $dividendo / $b? "
     read respuesta
     
     if (( respuesta == resultado ))
@@ -40,4 +51,6 @@ done
 echo ""
 echo -n "Presione ENTER para continuar"
 read
+
 bash menu.sh
+
