@@ -6,9 +6,9 @@ num2=$((RANDOM % 101))
 
 if (( num1<num2 ))
     then
-    aux=num1
-    num1=num2
-    num2=aux
+    aux=$num1
+    num1=$num2
+    num2=$aux
 fi
 
 resultado=$((num1 - num2))
