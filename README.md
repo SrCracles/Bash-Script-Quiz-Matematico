@@ -1,3 +1,5 @@
-Alejandro Mejia Mejia
-Nicolas Cardona 
-Julio Prado
+* Alejandro Mejia Mejia
+
+* Nicolas Cardona 
+
+* Julio Prado
